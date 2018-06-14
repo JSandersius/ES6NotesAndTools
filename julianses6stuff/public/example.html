@@ -8,16 +8,33 @@
 	
 	<script type="text/javascript">
 		
-//in JS we would have to do this 
-	function Plane() {
+	function Plane() {      //in JS we would have to do this 
 		this.wings = 2; 
 		this.speed = 100;
 		this.altitude = 0; 
 	}
+
 //then in order to create planes 
 // so the whole idea of classes is you substantiate 
  // new classes , you create new copies of these classes
 
+ 	//if we keep adding onto the plane, we can do something like this 
+Plane.prototype.fly = function() {  //use the prototpye on object--> plane.prototype with method fly 
+	this.altitude = 3000; 				
+}
+const myPlane = new Plane();
+
+function JetFighter() {
+	this.speed = 1000; 
+}
+
+JetFighter.prototype = new Plane();
+
+const myJetFighter = new JetFighter();
+
+console.log(myJetFighter);
+
+console.log(myPlane.wings); //run that there will be 2
 
 
 
