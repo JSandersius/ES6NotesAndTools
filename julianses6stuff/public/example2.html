@@ -38,7 +38,7 @@
             this.location.x += x;  ///this this. refers to this.location constructor
             this.location.y += y;
         }
-        static sayHello() {
+        static sayHello() {    //we dont have to instatiate a new HUman objec to use the static method, you can just use it 
         	return'Hi There';
         }
     }
@@ -53,16 +53,20 @@
 
     // const myWarrior = new Warrior();
     // console.log(myWarrior); //inhereits all the properties from Human 
+    console.log(Human.SayHello()) //result would be "Hi There"
+    console.log(Human.walk())  //result would be an error as walk is not a function 
 
     const julian = new Human(149);
     julian.walk(14, 6)
-    console.log(ryan)
+    console.log(julian)
 //we've created a new class here, we've created a base class
 //the whole idea of class based languages is that you can take these classes and use them as blue prints for other classes, other object so these things are extendable 
 
 //STATIC METHODS --> new keyword static that allows us to create methods that are static
 //when you have a class you have to ubstatntiate a new instance of that class in order to use a method
 //sometimes you want to just get some data, access the class and get some information 
+
+//another great thing about Static is that we can use the get and set from objects 
     </script>
 </body>
 
