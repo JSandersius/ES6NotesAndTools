@@ -38,17 +38,21 @@
             this.location.x += x;  ///this this. refers to this.location constructor
             this.location.y += y;
         }
+        static sayHello() {
+        	return'Hi There';
+        }
     }
 
     class Warrior extends Human {   //we want this to use the Human class as its base
     	constructor() {
+    		super();
     		this.strength = 10; //this is not defined, need a super() to call the super constructor, applies all those properties and allows one to apply new property to able to overide it 
 
     	}
     }
 
-    const myWarrior = new Warrior();
-    console.log(myWarrior); //inhereits all the properties from Human 
+    // const myWarrior = new Warrior();
+    // console.log(myWarrior); //inhereits all the properties from Human 
 
     const julian = new Human(149);
     julian.walk(14, 6)
@@ -56,6 +60,9 @@
 //we've created a new class here, we've created a base class
 //the whole idea of class based languages is that you can take these classes and use them as blue prints for other classes, other object so these things are extendable 
 
+//STATIC METHODS --> new keyword static that allows us to create methods that are static
+//when you have a class you have to ubstatntiate a new instance of that class in order to use a method
+//sometimes you want to just get some data, access the class and get some information 
     </script>
 </body>
 
