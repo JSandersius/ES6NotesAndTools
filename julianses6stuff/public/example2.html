@@ -19,17 +19,33 @@
 // }
 //  const julian = new Human();
 //  console.log(ryan)             this could become this 
-
+ 
+//_____________________________
 //in order ubstatnciate a new version of the clase we can pass in parameters  in the constructor 
 //height will be whatever user sets it to be 
+
 
 class Human {    
 	constructor(height) { 
 		this.height = height;
+		this.location = {
+			x: 0, 
+			y: 0
+		};
 	}	
-}
+	walk(x,y) {
+		this.location.x += x; 
+		this.location.y += y; 
+		}
+	}
+
  const julian = new Human(149);
+ julian.walk(14,6)
  console.log(ryan)
+
+
+
+
 
 
 
