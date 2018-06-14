@@ -1,56 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <title>Document</title>
 </head>
+
 <body>
-	<script type="text/javascript">
+    <script type="text/javascript">
+    //class keyword 
+    //class declaration 
+    //to add properties to class one must use constructor method 	
+    //constructor method is called whenever	
 
-//class keyword 
-//class declaration 
-//to add properties to class one must use constructor method 	
-//constructor method is called whenever	
+    // class Human {    
+    // 	constructor() { 
+    // 		this.height = 185;
+    // 	}	
+    // }
+    //  const julian = new Human();
+    //  console.log(ryan)             this could become this 
 
-// class Human {    
-// 	constructor() { 
-// 		this.height = 185;
-// 	}	
-// }
-//  const julian = new Human();
-//  console.log(ryan)             this could become this 
- 
-//_____________________________
-//in order ubstatnciate a new version of the clase we can pass in parameters  in the constructor 
-//height will be whatever user sets it to be 
-
-
-class Human {    
-	constructor(height) { 
-		this.height = height;
-		this.location = {
-			x: 0, 
-			y: 0
-		};
-	}	
-	walk(x,y) {
-		this.location.x += x; 
-		this.location.y += y; 
-		}
-	}
-
- const julian = new Human(149);
- julian.walk(14,6)
- console.log(ryan)
+    //_____________________________
+    //in order ubstatnciate a new version of the clase we can pass in parameters  in the constructor 
+    //height will be whatever user sets it to be 
 
 
+    class Human {
+        constructor(height) {
+            this.height = height;
+            this.location = {
+                x: 0,
+                y: 0
+            };
+        }
+        walk(x, y) {
+            this.location.x += x;  ///this this. refers to this.location constructor
+            this.location.y += y;
+        }
+    }
 
+    class Warrior extends Human {   //we want this to use the Human class as its base
+    	constructor() {
+    		this.strength = 10; //this is not defined, need a super() to call the super constructor, applies all those properties and allows one to apply new property to able to overide it 
 
+    	}
+    }
 
+    const myWarrior = new Warrior();
+    console.log(myWarrior); //inhereits all the properties from Human 
 
+    const julian = new Human(149);
+    julian.walk(14, 6)
+    console.log(ryan)
+//we've created a new class here, we've created a base class
+//the whole idea of class based languages is that you can take these classes and use them as blue prints for other classes, other object so these things are extendable 
 
-
-	</script>
-	
+    </script>
 </body>
+
 </html>
