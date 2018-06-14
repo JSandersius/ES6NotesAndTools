@@ -38,7 +38,7 @@
             this.location.x += x;  ///this this. refers to this.location constructor
             this.location.y += y;
         }
-        static sayHello() {    //we dont have to instatiate a new HUman objec to use the static method, you can just use it 
+        static get sayHello() {    //we dont have to instatiate a new HUman objec to use the static method, you can just use it 
         	return'Hi There';
         }
     }
@@ -66,7 +66,19 @@
 //when you have a class you have to ubstatntiate a new instance of that class in order to use a method
 //sometimes you want to just get some data, access the class and get some information 
 
-//another great thing about Static is that we can use the get and set from objects 
+//another great thing about Static is that we can use the get and set keyword from objects 
+//instead of calling the function, you can create a method 
+//when you call it like such as this 
+//console.log(Human.SayHello)  it will always return whatever is in there 
+//insteasd of having to call it ,you could set it up to do some other things and then return it for you 
+
+//get and set are not ES6 but they are something to think about 
+
+//Kyle Simpson - the class keyword is kind of codifying the constructor pattern 
+// The constructor pattern being where we create a function plane and then we use the  new keyword
+//Then new keyword for that function is a consttructor function we are constructing in 
+//now in classes we have the constructor function, we have this stuff that satisfies this stuff 
+// JS is so flexible that one does not need to do these things, but you can 
     </script>
 </body>
 
